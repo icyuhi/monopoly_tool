@@ -1,0 +1,19 @@
+/* mystyle.css */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btn1 {
+  background-color: white;
+  text-align: center;
+  font-size:2vw;
+  height:8vw;
+  width:30vw;
+}
+.dice1,.dice2,.dice_total {
+  display:inline-block;
+}
+.dice_total {
+  font-size:10vw;
+}
