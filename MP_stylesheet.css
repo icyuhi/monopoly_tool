@@ -1,19 +1,30 @@
-/* mystyle.css */
 *{
     margin: 0;
     padding: 0;
 }
-
-.btn1 {
-  background-color: white;
-  text-align: center;
-  font-size:2vw;
-  height:8vw;
-  width:30vw;
-}
-.dice1,.dice2,.dice_total {
+.dice1,.dice2,.dice_total  {
   display:inline-block;
 }
 .dice_total {
-  font-size:10vw;
+  text-align: center;
+  line-height:50px;
+  font-size:5vw;
 }
+
+.btn1 {
+  background-color: #FFFFFF;
+  border:solid;
+  text-align: center;
+  font-size:3vw;
+  height:6vw;
+  width:50vw;
+  margin-top: 1vw;
+  margin-bottom: 5vw;
+}
+
+.btn2,.btn3 {
+  border:solid;
+  height:12vw;
+  width:24vw
+}
+.btn3 {margin-left: 1vw;}
