@@ -4,32 +4,60 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="MP_stylesheet.css">
-  <script src="MP_main.js"></script>
+  <script src="MP_main.js"> </script>
   <title> Monopoly_tool </title>
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BootstrapのCSS読み込み -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- BootstrapのJS読み込み -->
+  <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<div class = "dice_rolling">
-  <div class="dice1" id="dice1"></div>
-  <div class="dice2" id="dice2"></div>
-  <div class="dice_total" id="dice_total"></div>
-  <p>
-    <input class="btn1" type="button" id="btn1" value="サイコロを振る" onclick="dice_roller()">
-  </p>
+  <header class=header>モノポリー支援用 簡易webアプリ</header>
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class ="col col-lg-2">
+        <div class="dice1" id="dice1"></div>
+      </div>
+      <div class = "col col-lg-2">
+        <div class="dice2" id="dice2"></div>
+      </div>
+      <div class = "col col-lg-2">
+        <div class="dice_total" id="dice_total"></div>
+      </div>
+    </div>
+
+  <div class="row justify-content-md-center">
+    <div class = "col col-lg-2">
+    </div>
+    <div class="col-md-auto">
+    <p>
+      <input class="btn1" type="button" id="btn1" value="サイコロを振る" onclick="dice_roller()">
+    </p>
+    </div>
+    <div class = "col col-lg-2">
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class = "col-md-auto">
+    <table>
+      <tr>
+        <input class="btn2" type="image" src="chance1.png" id="btn2" onclick="chance()">
+      </tr>
+      <tr>
+        <input class="btn3" type="image" src="chest1.png" id="btn3" onclick="community_chest()">
+      </tr>
+    </table>
+  </div>
+  </div>
 </div>
-
-
-<table>
-  <tr>
-    <input class="btn2" type="image" src="chance1.png" id="btn2" onclick="chance()">
-  </tr>
-  <tr>
-    <input class="btn3" type="image" src="chest1.png" id="btn3" onclick="community_chest()">
-  </tr>
-</table>
-
-
+  <footer class=footer> monopoly tool for personal use only </footer>
 </body>
 
 </html>

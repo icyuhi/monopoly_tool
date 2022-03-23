@@ -1,13 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    font-family:sans-serif;
 }
-.dice1,.dice2,.dice_total  {
-  display:inline-block;
-}
-.dice_total {
+
+.header {
+  padding-top: 2vw;
   text-align: center;
-  line-height:50px;
+  font-size:2vw;
+  height:8vw;
+  width:100vw;
+}
+
+.dice_total {
   font-size:5vw;
 }
 
@@ -28,3 +33,11 @@
   width:24vw
 }
 .btn3 {margin-left: 1vw;}
+
+.footer {
+text-align: center;
+font-size:1vw;
+margin-top:5vw;
+height:8vw;
+width:100vw;
+}
