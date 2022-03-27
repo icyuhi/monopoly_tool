@@ -1,6 +1,6 @@
 let count;
 let $id = function(id){ return document.getElementById(id); };
-function role(){
+function role(){n
     let dice1 = Math.floor(Math.random() * 6) + 1;
     dice1a = "dice" + dice1 + ".png";
     $id("dice1").innerHTML = "<img src='" + dice1a + "' width='110px' height='110px'>";
@@ -30,7 +30,7 @@ window.onload = function(){
 }
 
 function chance() {
-	rand = Math.floor(Math.random()*14);
+	rand = Math.floor(Math.random()*15);
 	if (rand == 0) msg = "スピード違反で15ドル支払う";
 	if (rand == 1) msg = "委員会の委員長に選任され各プレイヤーに50ドル支払う";
 	if (rand == 2) msg = "銀行より利息50ドル受取る";
@@ -41,7 +41,7 @@ function chance() {
 	if (rand == 7) msg = "セントチャールズプレースへ進む。もしGOを通ったら200ドル受取る";
 	if (rand == 8) msg = "イリノイ通りへ進む。もしGOを通ったら200ドル受取る";
 	if (rand == 9) msg = "ボードウォークへ進む";
-  if (rand == 10) msg = "次の水道会社か電力会社に進む。所有者がいなければ買うことができる。所有者がいたらサイコロの目の10倍を支払う";
+  if (rand == 10) msg = "次yの水道会社か電力会社に進む。所有者がいなければ買うことができる。所有者がいたらサイコロの目の10倍を支払う";
 	if (rand == 11) msg = "3マス戻る";
 	if (rand == 12) msg = "刑務所から釈放される。このカードは必要になるまで持っていても売却してもよい";
 	if (rand == 13) msg = "刑務所に行く。GOを通っても200ドルは受取れない";
@@ -50,7 +50,7 @@ function chance() {
 }
 
 function community_chest() {
-	rand = Math.floor(Math.random()*15);
+	rand = Math.floor(Math.random()*16);
 	if (rand == 0) msg = "治療費として50ドル支払う";
 	if (rand == 1) msg = "教育費として50ドル支払う";
 	if (rand == 2) msg = "入院費100ドル支払う";
