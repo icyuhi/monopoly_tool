@@ -1,13 +1,13 @@
 let count;
 let $id = function(id){ return document.getElementById(id); };
-function role(){n
+function role(){
     let dice1 = Math.floor(Math.random() * 6) + 1;
     dice1a = "dice" + dice1 + ".png";
-    $id("dice1").innerHTML = "<img src='" + dice1a + "' width='110px' height='110px'>";
+    $id("dice1").innerHTML = "<img src='" + dice1a + "' width='60%' height='60%'>";
     let dice2 = Math.floor(Math.random() * 6) + 1;
     dice2a = "dice" + dice2 + ".png";
-    $id("dice2").innerHTML = "<img src='" + dice2a + "' width='110px' height='110px'>";
-    $id("dice_total").innerHTML = dice1 + dice2
+    $id("dice2").innerHTML = "<img src='" + dice2a + "' width='60%' height='60%'>";
+    $id("dice_total").innerHTML = dice1 + dice2;
 }
 function anime(){
     if(count > 20)
@@ -41,7 +41,7 @@ function chance() {
 	if (rand == 7) msg = "セントチャールズプレースへ進む。もしGOを通ったら200ドル受取る";
 	if (rand == 8) msg = "イリノイ通りへ進む。もしGOを通ったら200ドル受取る";
 	if (rand == 9) msg = "ボードウォークへ進む";
-  if (rand == 10) msg = "次yの水道会社か電力会社に進む。所有者がいなければ買うことができる。所有者がいたらサイコロの目の10倍を支払う";
+  if (rand == 10) msg = "次の水道会社か電力会社に進む。所有者がいなければ買うことができる。所有者がいたらサイコロの目の10倍を支払う";
 	if (rand == 11) msg = "3マス戻る";
 	if (rand == 12) msg = "刑務所から釈放される。このカードは必要になるまで持っていても売却してもよい";
 	if (rand == 13) msg = "刑務所に行く。GOを通っても200ドルは受取れない";
