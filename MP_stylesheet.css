@@ -35,9 +35,32 @@
 .btn3 {margin-left: 1vw;}
 
 .footer {
-text-align: center;
-font-size:1vw;
-margin-top:5vw;
-height:8vw;
-width:100vw;
+  text-align: center;
+  font-size:1vw;
+  margin-top:5vw;
+  height:8vw;
+  width:100vw;
+}
+
+/* モーダル */
+.modal-overlay {
+    z-index:1;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.5);
+}
+.modal-content {
+    position:fixed;
+    display:none;
+    z-index:100;
+    padding:15px;
+    border-radius:5px;
+    background:#eee;
+}
+.chancecard,.community_chest {
+    display:none;
 }

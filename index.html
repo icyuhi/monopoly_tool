@@ -4,26 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title> Monopoly_tool </title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- BootstrapのCSS読み込み -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- BootstrapのJS読み込み -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- 自分で書いたCSSとJS -->
   <link rel="stylesheet" href="MP_stylesheet.css">
   <script src="MP_main.js"> </script>
+  <!-- BootstrapのCSS読み込み -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
   <header class=header>モノポリー支援用 簡易webアプリ</header>
 
-  <div class="container">
-    <div class="row justify-content-md-center">
+
+<div class="container">
+  <!-- サイコロ要素 -->
+  <div class="row justify-content-md-center">
       <div class="col-md-auto">
         <div class="dice1" id="dice1"> </div>
       </div>
@@ -41,15 +37,210 @@
     </p>
     </div>
   </div>
-
+<!-- カード要素 -->
   <div class="row justify-content-md-center">
     <div class = "col-md-auto">
     <table>
       <tr>
-        <input class="btn2" type="image" src="chance1.png" id="btn2" onclick="chance()">
+<!-- チャンスボタン要素 -->
+    <button class="btn2" type="button" id="btn2">
+      <img src="chance1.png" height="100%" width="100%">
+      </button>
+<!-- チャンスモーダル要素-->
+        <div class="chancecard">
+           <div style="width:100%">
+               <center><h2>チャンス！</h2>
+               <h3> スピード違反で15ドル支払う。 </h3>
+           </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+              <h3> 委員会の委員長に選任され各プレイヤーに50ドル支払う。</h3>
+           </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+              <h3> 銀行より利息50ドル受取る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+              <h3> 建物ローンの満期で150ドル受取る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+              <h3> GOのマスへ進み200ドル受取る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+              <h3> 次の鉄道会社まで進む。所有者がいなければ買うことができる。<br>
+              所有者がいたら通常の2倍のレンタル料を支払う。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> セントチャールズプレースへ進む。もしGOを通ったら200ドル受取る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> イリノイ通りへ進む。もしGOを通ったら200ドル受取る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> ボードウォークへ進む。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> 次の水道会社か電力会社に進む。所有者がいなければ買うことができる。<br>
+                所有者がいたらサイコロの目の10倍を支払う。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> 3マス戻る。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3>「刑務所から釈放される」カードを得る。<br>
+                このカードは必要になるまで持っていても売却してもよい。<br>
+                （カードが不足しているときは、もう一度引き直す）</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3> 刑務所に行く。GOを通っても200ドルは受取れない。</h3>
+          </div>
+        </div>
+        <div class="chancecard">
+          <div style="width:100%">
+              <center><h2>チャンス！</h2>
+                <h3>全財産の修理費、家1軒当たり25ドル、ホテル1軒当たり100ドル支払う。
+                </h3>
+          </div>
+        </div>
       </tr>
       <tr>
-        <input class="btn3" type="image" src="chest1.png" id="btn3" onclick="community_chest()">
+<!-- 共同基金ボタン要素 -->
+  <button class="btn3" type="button" id="btn3">
+    <img src="chest1.png" height="100%" width="100%">
+    </button>
+<!-- 共同基金モーダル要素 -->
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 治療費として50ドル支払う。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 教育費として50ドル支払う。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 入院費100ドル支払う。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 誕生日祝いとしてすべてのプレイヤーから10ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> ビューティーコンテスト準優勝。10ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 所得税の払い戻し金20ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> コンサルタント料金として25ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 株式売却により50ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 遺産100ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 休日基金の満期により100ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 生命保険満期により100ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 銀行の手違いで200ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> GOのマスへ進み200ドル受取る。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3>「刑務所から釈放される」カードを得る。<br>
+            このカードは必要になるまで持っていても売却してもよい。<br>
+            （カードが不足しているときは、もう一度引き直す）</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+            <h3> 刑務所に行く。GOを通っても200ドルは受取れない。</h3>
+          </div>
+      </div>
+      <div class="community_chest">
+        <div style="width:100%">
+          <center><h2>共同基金</h2>
+          <h3> 道路の修理費として家1軒当たり40ドル、ホテル1軒当たり115ドル支払う。</h3>
+          </div>
+      </div>
       </tr>
     </table>
   </div>
